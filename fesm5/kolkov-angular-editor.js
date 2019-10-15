@@ -1097,7 +1097,7 @@ var AngularEditorToolbarComponent = /** @class */ (function () {
         var _this = this;
         /** @type {?} */
         var file = event.target.files[0];
-        if (file.type.includes('image/')) {
+        if (file.type.includes('image/') && !file.type.includes('gif') && !file.type.includes('svg')) {
             if (this.uploadUrl) {
                 this.editorService.uploadImage(file).subscribe((/**
                  * @param {?} e
